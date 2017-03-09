@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secret Victory</title>
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+
+    <script src="js/jquery-2.2.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.PageScroll2id.js"></script>
+</head>
+<body class="bg-soft-grey">
+
+
+<!--Modal-->
+<div class="modal fade confirm" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Pembelian</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>Irreplaceable</h1>
+                        <p style="margin-top: 15px">Jumlah <span class="green">1</span></p>
+                        <h4 style="margin-bottom: 30px">Rp 80.000,00 <span style="font-size: 12px">(Harga belum termasuk ongkir)</span></h4>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>Keterangan :</p>
+                        <textarea style="width: 100%"></textarea>
+                    </div>
+                    <div class="col-sm-12">
+                        <form class="form-horizontal" action="" method="post">
+                            <div class="col-sm-12">
+                                <p style="margin-bottom: 5px">Alamat</p>
+                                <input class="form-control" type="text" name="alamat">
+
+                                <p style="margin-bottom: 5px; margin-top: 10px">Nama Penerima</p>
+                                <input class="form-control" type="text" name="alamat">
+
+                                <p style="margin-bottom: 5px; margin-top: 10px">No. Hp Penerima</p>
+                                <input class="form-control" type="text" name="alamat">
+
+                                <p style="margin-bottom: 5px; margin-top: 10px">Kode Pos</p>
+                                <input class="form-control" type="text" name="alamat">
+                            </div>
+
+                            <div class="col-sm-4">
+                                <p style="margin-bottom: 5px; margin-top: 10px">Provinsi</p>
+                                <input class="form-control" type="text" name="alamat">
+                            </div>
+
+                            <div class="col-sm-4">
+                                <p style="margin-bottom: 5px; margin-top: 10px">Kabupaten</p>
+                                <input class="form-control" type="text" name="alamat">
+                            </div>
+
+                            <div class="col-sm-4">
+                                <p style="margin-bottom: 5px; margin-top: 10px">Kecamatan</p>
+                                <input class="form-control" type="text" name="alamat">
+                            </div>
+
+                            <div class="col-sm-4">
+                                <button style="margin-top: 15px; width: 100%" type="submit" class="btn bg-green"><i class="fa fa-shopping-cart"></i> Beli</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!--End Modal-->
+
+<div class="header">
+    <div class="wrapper2">
+        <div class="row">
+            <div class="col-sm-2">
+                <img style="width: 70%" src="img/Logo-Secret-Victory.png">
+            </div>
+            <div class="col-sm-3 col-sm-offset-3">
+                <div class="form-group" style="margin: 5px 0px 0px 0px">
+                    <div class="row">
+                        <div class="col-sm-9"><input type="text" placeholder="Search"></div>
+                        <div class="col-sm-2"><a href=""><i class="fa fa-search"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <ul>
+                    <li><a href=""><i style="font-size: 20px" class="fa fa-shopping-cart"></i> </a></li>
+                    <li class="dropdown"><a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="" style="font-size: 16px">Putri Damayanti <i class="fa fa-angle-down"></i> </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a style="width: 100%" href="confirmation.html">Confirmation Payment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="wrapper2">
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="item-product" src="img/A15.png">
+            </div>
+            <div class="col-sm-6">
+                <div class="item-title">IRREPLACEABLE</div>
+                <div class="item-price">Rp 80.000,00</div>
+                <div class="item-desc">
+                    <p>Jahitan bagus, design original buatan tangan designer secret victory</p>
+                </div>
+                <div class="item-info">
+                    <span style="font-size: 16px; padding-right: 20px">Size</span>
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </div>
+                <div class="item-info">
+                    <span style="font-size: 16px; padding-right: 20px">Quantity</span>
+                    <input type="text" placeholder="Qty">
+                </div>
+                <div class="col-sm-7">
+                    <a class="btn bg-green buy" data-toggle="modal" data-target=".confirm">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="wrapper1">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="img/Logo-Secret-Victory-white.png">
+                <p>Secret Victory merupakan tumblr tee shop terbesar se Indonesia.</p>
+            </div>
+            <div class="col-sm-3 col-sm-offset-1">
+                <div class="footer-heading">
+                    Informasi
+                </div>
+                <div class="footer-content">
+                    <ul>
+                        <li><a href="">Tentang Kami</a></li>
+                        <li><a href="">Syarat & Ketentuan</a></li>
+                        <li><a href="">Kebijakan Privasi</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="footer-heading">
+                    Hubungi Kami
+                </div>
+                <div class="footer-content">
+                    <ul>
+                        <li> <a href=""><i class="fa fa-instagram"></i> @secretvictory_</a></li>
+                        <li> <a href=""><i class="fa fa-facebook"></i>secretvictory</a></li>
+                        <li> <a href=""><i class="fa fa-twitter"></i>@secretvictory</a></li>
+                        <li> <a href=""><i class="fa fa-globe"></i>secretvictory.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

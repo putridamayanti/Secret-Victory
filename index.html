@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secret Victory</title>
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="js/jquery-2.2.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.PageScroll2id.js"></script>
+
+    <script>
+
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        (function($){
+            $(window).load(function(){
+                $(".header a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+                    highlightSelector:".header a"
+                });
+
+                $("a[rel='next']").click(function(e){
+                    e.preventDefault();
+                    var to=$(this).parent().parent("section").next().attr("class");
+                    $.mPageScroll2id("scrollTo",to);
+                });
+            });
+        })(jQuery);
+    </script>
+
+</head>
+<body>
+
+<div class="modal fade login" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Login</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form class="form-horizontal">
+                        <div class="col-md-7 col-sm-offset-2">
+                            <div class="form-group">
+                                <span class="col-sm-2"><i class="fa fa-user"></i></span>
+                                <input class="col-sm-10" type="text" name="username" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <span class="col-sm-2"><i class="fa fa-lock"></i></span>
+                                <input class="col-sm-10" type="password" name="password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn bg-green col-sm-3">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade register" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form class="form-horizontal">
+                        <div class="col-md-7 col-sm-offset-2">
+                            <div class="form-group">
+                                <span class="col-sm-2"><i class="fa fa-envelope"></i></span>
+                                <input class="col-sm-10" type="text" name="email" placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                                <span class="col-sm-2"><i class="fa fa-user"></i></span>
+                                <input class="col-sm-10" type="text" name="username" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <span class="col-sm-2"><i class="fa fa-lock"></i></span>
+                                <input class="col-sm-10" type="password" name="password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn bg-green col-sm-3">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="home">
+    <div class="mini-header">
+        <div class="wrapper2">
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul>
+                        <li><a href=""><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter-square"></i></a></li>
+                        <li><a href=""><i class="fa fa-pinterest-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-sm-offset-3">
+                    <ul>
+                        <li><a class="btn" data-toggle="modal" data-target=".login">Login</a></li>
+                        <li><a class="btn" data-toggle="modal" data-target=".register">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="wrapper1">
+            <div class="row">
+                <div class=col-sm-3">
+                    <ul style="margin-left: 25%">
+                        <li><a href="#home" >Home</a></li>
+                        <li><a href="#catalogue" >Catalogue</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <center><img style="width: 70%" src="img/Logo-Secret-Victory.png"></center>
+                </div>
+                <div class="col-sm-3">
+                    <ul>
+                        <li><a href="#newest">New</a></li>
+                        <li><a href="#testimoni" >Testimonials</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper2">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="content">
+                    <h1>SECRET VICTORY</h1>
+                    <h3>The popular tumbler tee shop. </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                        ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
+                        in hendrerit in vulputate velit esse molestie consequat.
+                    </p>
+                    <a href="#catalogue" class="btn bg-green">Catalogue</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="img/model4.png" alt="...">
+                        </div>
+                        <div class="item">
+                            <img src="img/model2.png" alt="...">
+                        </div>
+                        <div class="item">
+                            <img src="img/model3.png" alt="...">
+                        </div>
+                        <div class="item">
+                            <img src="img/model1.png" alt="...">
+                        </div>
+                        <div class="item">
+                            <img src="img/model5.png" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sales">
+    <div class="wrapper1">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="sale">
+                    <img src="img/sale1.png">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="sale">
+                    <img src="img/sale3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="newest">
+    <div class="overlay">
+        <div class="wrapper2">
+            <div class="newest-heading">
+                <h1>NEWEST<span class="green"> PRODUCT</span></h1>
+            </div>
+            <div class="newest-content">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="product">
+                            <a href="">
+                                <img src="img/A10.png">
+                                <h3 class="title">Gute Nacht</h3>
+                                <h4 class="title">Rp 80.000,00</h4>
+                                <a href="" style="width: 50%" class="btn bg-green">Beli</a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product">
+                            <a href="">
+                                <img src="img/A10.png">
+                                <h3 class="title">Gute Nacht</h3>
+                                <h4 class="title">Rp 80.000,00</h4>
+                                <a href="" style="width: 50%" class="btn bg-green">Beli</a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product">
+                            <a href="">
+                                <img src="img/A10.png">
+                                <h3 class="title">Gute Nacht</h3>
+                                <h4 class="title">Rp 80.000,00</h4>
+                                <a href="" style="width: 50%" class="btn bg-green">Beli</a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product">
+                            <a href="">
+                                <img src="img/A10.png">
+                                <h3 class="title">Gute Nacht</h3>
+                                <h4 class="title">Rp 80.000,00</h4>
+                                <a href="" style="width: 50%" class="btn bg-green">Beli</a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="catalogue">
+    <div class="wrapper2">
+        <div class="catalogue-heading">
+            <h1>OUR<span class="green"> CATALOGUE</span></h1>
+        </div>
+        <div class="catalogue-content">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="product">
+                        <a href="">
+                            <img src="img/A10.png">
+                            <h3 class="title">Gute Nacht</h3>
+                            <h4 class="title">Rp 80.000,00</h4>
+                            <a href="detail.html" style="width: 50%" class="btn bg-green">Beli</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="product">
+                        <a href="">
+                            <img src="img/A11.png">
+                            <h3 class="title">Gute Nacht</h3>
+                            <h4 class="title">Rp 80.000,00</h4>
+                            <a href="" style="width: 50%" class="btn bg-green">Beli</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="product">
+                        <a href="">
+                            <img src="img/A12.png">
+                            <h3 class="title">Gute Nacht</h3>
+                            <h4 class="title">Rp 80.000,00</h4>
+                            <a href="" style="width: 50%" class="btn bg-green">Beli</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="product">
+                        <a href="">
+                            <img src="img/A14.png">
+                            <h3 class="title">Gute Nacht</h3>
+                            <h4 class="title">Rp 80.000,00</h4>
+                            <a href="" style="width: 50%" class="btn bg-green">Beli</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <a class="green more" href="">More Product <i class="fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="testimoni">
+    <div class="overlay-green">
+        <div class="wrapper2">
+            <div class="testi-heading">
+                <h1>Testimonials</h1>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="testi-content">
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-4">
+                                <img src="img/testi1.png">
+                            </div>
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p><i class="fa fa-quote-left"></i>
+                                    Bajunya bagus, kece, designnya keren dan new banget jarang ada yang bikin kaos design tulisan tangan sendiri.
+                                    Thank's dah pokoknya.
+                                    <i class="fa fa-quote-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="testi-content">
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-4">
+                                <img src="img/testi1.png">
+                            </div>
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p><i class="fa fa-quote-left"></i>
+                                    Bajunya bagus, kece, designnya keren dan new banget jarang ada yang bikin kaos design tulisan tangan sendiri.
+                                    Thank's dah pokoknya.
+                                    <i class="fa fa-quote-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="wrapper1">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="img/Logo-Secret-Victory-white.png">
+                <p>Secret Victory merupakan tumblr tee shop terbesar se Indonesia.</p>
+            </div>
+            <div class="col-sm-3 col-sm-offset-1">
+                <div class="footer-heading">
+                    Informasi
+                </div>
+                <div class="footer-content">
+                    <ul>
+                        <li><a href="">Tentang Kami</a></li>
+                        <li><a href="">Syarat & Ketentuan</a></li>
+                        <li><a href="">Kebijakan Privasi</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="footer-heading">
+                    Hubungi Kami
+                </div>
+                <div class="footer-content">
+                    <ul>
+                        <li> <a href=""><i class="fa fa-instagram"></i> @secretvictory_</a></li>
+                        <li> <a href=""><i class="fa fa-facebook"></i>secretvictory</a></li>
+                        <li> <a href=""><i class="fa fa-twitter"></i>@secretvictory</a></li>
+                        <li> <a href=""><i class="fa fa-globe"></i>secretvictory.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
